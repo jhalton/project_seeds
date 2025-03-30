@@ -20,7 +20,7 @@ function VerseCarousel({ verses }) {
     >
       {verses.map((verse, index) => (
         <SwiperSlide key={index}>
-          <VerseCard text={verse.text} />
+          <VerseCard text={verse.text} reference={verse.reference} />
         </SwiperSlide>
       ))}
     </Swiper>
