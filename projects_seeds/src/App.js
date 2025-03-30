@@ -40,6 +40,7 @@ const initialVerses = [
 function App() {
   const [filterTag, setFilterTag] = useState("all");
   const [verses, setVerses] = useState(initialVerses);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   // Filter verses when tag changes
   useEffect(() => {
@@ -58,12 +59,30 @@ function App() {
 
   return (
     <div className="App">
-      <FilterButtons
-        tags={tags}
-        activeTag={filterTag}
-        onTagChange={setFilterTag}
-      />
-      <VerseCarousel verses={verses} />
+      <header className="header">
+        <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+          <span className="hamburger-line"></span>
+          <span className="hamburger-line"></span>
+          <span className="hamburger-line"></span>
+        </button>
+
+        <h1>Seeds</h1>
+
+        <nav className={`menu ${menuOpen ? "open" : ""}`}>
+          <a href="#guide" onClick={() => setMenuOpen(false)}>
+            Guide
+          </a>
+          {/* Add more links here later */}
+        </nav>
+      </header>
+      <main className="main-content">
+        <FilterButtons
+          tags={tags}
+          activeTag={filterTag}
+          onTagChange={setFilterTag}
+        />
+        <VerseCarousel verses={verses} />
+      </main>
       <footer className="footer">
         <p>Created by Jeanette Halton</p>
         <div className="social-links">
