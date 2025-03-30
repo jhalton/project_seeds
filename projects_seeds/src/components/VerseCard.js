@@ -4,7 +4,6 @@ function VerseCard({ text, reference }) {
   return (
     <div className="verse-card">
       <p className="verse-text">{text}</p>
-
       <p className="verse-reference">{reference}</p>
     </div>
   );
@@ -12,7 +11,6 @@ function VerseCard({ text, reference }) {
 
 export default VerseCard;
 
-// Inline styles
 const styles = `
   .verse-card {
     display: flex;
@@ -23,17 +21,17 @@ const styles = `
 
   .verse-text {
     margin: 0 0 12px 0;
-    font-size: 20px; /* Slightly larger for emphasis */
+    font-size: 20px;
     font-weight: 500;
     line-height: 1.6;
-    color: #1f2937; /* Dark gray for contrast */
+    color: #2d2d2d;
   }
 
   .verse-reference {
     margin: 0;
     font-size: 14px;
     font-weight: 400;
-    color: #6b7280; /* Softer gray */
+    color: #7a6c5d;
     font-style: italic;
     opacity: 0.9;
   }

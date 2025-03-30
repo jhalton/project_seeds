@@ -64,6 +64,32 @@ function App() {
         onTagChange={setFilterTag}
       />
       <VerseCarousel verses={verses} />
+      <footer className="footer">
+        <p>Created by Jeanette Halton</p>
+        <div className="social-links">
+          <a
+            href="https://github.com/jhalton"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+          <a
+            href="https://linkedin.com/in/jeanettehalton"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
+          <a
+            href="https://jeanettehalton.dev"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Portfolio
+          </a>
+        </div>
+      </footer>
     </div>
   );
 }

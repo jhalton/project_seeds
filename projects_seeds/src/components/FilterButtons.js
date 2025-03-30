@@ -18,7 +18,6 @@ function FilterButtons({ tags, activeTag, onTagChange }) {
 
 export default FilterButtons;
 
-// Inline styles for this component
 const styles = `
   .filter-buttons {
     display: flex;
@@ -33,21 +32,21 @@ const styles = `
     font-size: 14px;
     font-weight: 500;
     border: none;
-    background: #e5e7eb; /* Light gray */
-    border-radius: 20px; /* Pill shape */
+    background: #e8e8e8;
+    border-radius: 20px;
     cursor: pointer;
     transition: all 0.3s ease;
-    color: #374151; /* Darker gray text */
+    color: #2d2d2d;
   }
 
   .filter-buttons button:hover {
-    background: #d1d5db;
+    background: #d9d9d9;
   }
 
   .filter-buttons button.active {
-    background: #3b82f6; /* Modern blue */
-    color: white;
-    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+    background: #d4a017; /* Muted gold */
+    color: #ffffff;
+    box-shadow: 0 2px 8px rgba(212, 160, 23, 0.3);
   }
 `;
 document.head.insertAdjacentHTML("beforeend", `<style>${styles}</style>`);
